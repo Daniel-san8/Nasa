@@ -8,6 +8,7 @@ const Header = () => {
       </div>
       <div className="px-8">
         <img src="shared/icon-hamburger.svg" alt="hamburguer" />
+        <img className="hidden" src="shared/icon-close.svg" alt="X" />
       </div>
     </header>
   );
