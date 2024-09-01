@@ -2,7 +2,7 @@ import React from "react";
 
 const MobileNavigation = () => {
   return (
-    <div className="flex flex-col absolute top-0 right-0 bg-blue-700 z-10 h-full w-56">
+    <div className="flex flex-col absolute top-0 right-0 bg-blue-primary  backdrop-filter bg-opacity-20 backdrop-blur-xl z-10 h-full w-56">
       <div className="self-end py-8 pr-6">
         <img
           className="right-6 cursor-pointer"
