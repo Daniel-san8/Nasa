@@ -1,27 +1,29 @@
 import React from "react";
+import { globalUse } from "../Context/GlobalContext";
 
 const MobileNavigation = () => {
-  const close = React.useRef<null | HTMLDivElement>(null);
   const navigation = React.useRef<null | HTMLDivElement>(null);
+  const { menuActive, setMenuActive } = globalUse();
+
   React.useEffect(() => {
-    function handleMenu() {
+    if (menuActive) {
+      navigation.current?.classList.remove("hidden");
+      navigation.current?.classList.add("flex");
+    } else {
+      navigation.current?.classList.remove("flex");
       navigation.current?.classList.add("hidden");
     }
-    if (close.current && navigation.current) {
-      close.current.addEventListener("click", handleMenu);
-    }
-
-    return () => {
-      close.current?.removeEventListener("click", handleMenu);
-    };
-  }, [close]);
+  }, [menuActive]);
 
   return (
     <div
-      className="flex flex-col absolute top-0 right-0 bg-blue-primary backdrop-filter bg-opacity-20 backdrop-blur-xl z-10 h-full w-56 md:hidden"
+      className="hidden flex-col absolute top-0 right-0 bg-blue-primary backdrop-filter bg-opacity-20 backdrop-blur-xl z-10 h-full w-56 md:hidden"
       ref={navigation}
     >
-      <div className="self-end py-8 pr-6" ref={close}>
+      <div
+        className="self-end py-8 pr-6"
+        onClick={() => setMenuActive(!menuActive)}
+      >
         <img
           className="right-6 cursor-pointer"
           src="shared/icon-close.svg"
