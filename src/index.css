@@ -5,6 +5,19 @@
 @tailwind utilities;
 
 @layer utilities {
+  .animationMenu {
+    animation: menu 0.5s ease-out forwards;
+  }
+
+  @keyframes menu {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: translateX(initial);
+    }
+  }
+
   .before-content::before {
     content: "";
     position: absolute;

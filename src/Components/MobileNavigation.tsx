@@ -8,9 +8,9 @@ const MobileNavigation = () => {
   React.useEffect(() => {
     if (menuActive) {
       navigation.current?.classList.remove("hidden");
-      navigation.current?.classList.add("flex");
+      navigation.current?.classList.add("flex", "animationMenu");
     } else {
-      navigation.current?.classList.remove("flex");
+      navigation.current?.classList.remove("flex", "animationMenu");
       navigation.current?.classList.add("hidden");
     }
   }, [menuActive]);
