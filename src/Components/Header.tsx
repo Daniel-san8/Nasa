@@ -13,29 +13,26 @@ const Header = () => {
           alt="hamburguer"
         />
       </nav>
-      <div className="hidden  md:flex pl-24 pr-12 h-24 self-start  bg-white backdrop-filter bg-opacity-5 backdrop-blur-xl lg:backdrop-blur-sm lg:before-content ">
+      <div className="hidden  md:hidden pl-24 pr-12 h-24 self-start  bg-white backdrop-filter bg-opacity-5 backdrop-blur-xl lg:backdrop-blur-sm lg:before-content ">
         <div className="font-barlow text-white tracking-widest self-center lg:pr-16">
           <ul className="flex whitespace-nowrap">
             <li>
-              <span className="font-bold pr-3 pl-10 after-content">00</span>Home
+              <span className="font-bold mr-3 ml-10 after-content cursor-pointer">
+                00
+              </span>
+              <span className="cursor-pointer">Home</span>
             </li>
             <li>
-              <span className="font-bold pr-3 pl-10 after-content-destination">
-                01
-              </span>
-              Destination
+              <span className="font-bold mr-3 ml-10 cursor-pointer">01</span>
+              <span className="cursor-pointer">Destination</span>
             </li>
             <li>
-              <span className="font-bold pr-3 pl-12 after-content-crew">
-                02
-              </span>
-              Crew
+              <span className="font-bold mr-3 ml-12 cursor-pointer">02</span>
+              <span className="cursor-pointer">Crew</span>
             </li>
             <li>
-              <span className="font-bold pr-3 pl-12 after-content-technology">
-                03
-              </span>
-              Technology
+              <span className="font-bold mr-3 ml-12 cursor-pointer">03</span>
+              <span className="cursor-pointer">Technology</span>
             </li>
           </ul>
         </div>

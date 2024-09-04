@@ -16,7 +16,7 @@ const Main = () => {
         </p>
       </div>
       <div className="flex justify-center px-20 py-24 md:py-16 md:px-28  xl:ml-72">
-        <button className="text-blue-primary text-2xl bg-white cursor-pointer px-10 py-14 rounded-full md:px-16 md:py-24 md:text-3xl ">
+        <button className="border-8 border-black border-opacity-5 text-blue-primary text-2xl bg-white cursor-pointer px-10 py-14 rounded-full md:px-16 md:py-24 md:text-3xl ">
           Explorar
         </button>
       </div>

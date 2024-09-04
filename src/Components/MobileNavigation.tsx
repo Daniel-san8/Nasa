@@ -1,9 +1,27 @@
 import React from "react";
 
 const MobileNavigation = () => {
+  const close = React.useRef<null | HTMLDivElement>(null);
+  const navigation = React.useRef<null | HTMLDivElement>(null);
+  React.useEffect(() => {
+    function handleMenu() {
+      navigation.current?.classList.add("hidden");
+    }
+    if (close.current && navigation.current) {
+      close.current.addEventListener("click", handleMenu);
+    }
+
+    return () => {
+      close.current?.removeEventListener("click", handleMenu);
+    };
+  }, [close]);
+
   return (
-    <div className="hidden flex-col absolute top-0 right-0 bg-blue-primary backdrop-filter bg-opacity-20 backdrop-blur-xl z-10 h-full w-56 md:hidden">
-      <div className="self-end py-8 pr-6">
+    <div
+      className="flex flex-col absolute top-0 right-0 bg-blue-primary backdrop-filter bg-opacity-20 backdrop-blur-xl z-10 h-full w-56 md:hidden"
+      ref={navigation}
+    >
+      <div className="self-end py-8 pr-6" ref={close}>
         <img
           className="right-6 cursor-pointer"
           src="shared/icon-close.svg"
