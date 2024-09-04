@@ -20,14 +20,12 @@ const MobileNavigation = () => {
       className="hidden flex-col absolute top-0 right-0 bg-blue-primary backdrop-filter bg-opacity-20 backdrop-blur-xl z-10 h-full w-56 md:hidden"
       ref={navigation}
     >
-      <div
-        className="self-end py-8 pr-6"
-        onClick={() => setMenuActive(!menuActive)}
-      >
+      <div className="self-end py-8 pr-6">
         <img
           className="right-6 cursor-pointer"
           src="shared/icon-close.svg"
           alt="X"
+          onClick={() => setMenuActive(!menuActive)}
         />
       </div>
       <div className="font-barlow text-white tracking-widest py-12">
