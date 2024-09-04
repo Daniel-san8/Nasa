@@ -13,18 +13,29 @@ const Header = () => {
           alt="hamburguer"
         />
       </nav>
-      <div className="hidden  md:flex pl-24 pr-12 h-24 self-start  bg-white backdrop-filter bg-opacity-5 backdrop-blur-xl lg:backdrop-blur-sm lg:before-content">
+      <div className="hidden  md:flex pl-24 pr-12 h-24 self-start  bg-white backdrop-filter bg-opacity-5 backdrop-blur-xl lg:backdrop-blur-sm lg:before-content ">
         <div className="font-barlow text-white tracking-widest self-center lg:pr-16">
-          <ul className="flex">
-            <li>Home</li>
+          <ul className="flex whitespace-nowrap">
             <li>
-              <span className="font-bold pr-3 pl-10">01</span>Destination
+              <span className="font-bold pr-3 pl-10 after-content">00</span>Home
             </li>
             <li>
-              <span className="font-bold pr-3 pl-12">02</span>Crew
+              <span className="font-bold pr-3 pl-10 after-content-destination">
+                01
+              </span>
+              Destination
             </li>
             <li>
-              <span className="font-bold pr-3 pl-12">03</span>Technology
+              <span className="font-bold pr-3 pl-12 after-content-crew">
+                02
+              </span>
+              Crew
+            </li>
+            <li>
+              <span className="font-bold pr-3 pl-12 after-content-technology">
+                03
+              </span>
+              Technology
             </li>
           </ul>
         </div>
