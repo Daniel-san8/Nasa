@@ -12,8 +12,17 @@
   .before-content::before {
     content: "";
     position: absolute;
-    left: -10px;
     background-color: red;
-    width: 120px;
+    width: 30%;
+    height: 1px;
+    bottom: 50%;
+    right: 95%;
+    max-width: 50%;
+  }
+
+  @media (min-width: 1200px) {
+    .before-content::before {
+      width: 50%;
+    }
   }
 }
