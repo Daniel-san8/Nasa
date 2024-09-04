@@ -13,7 +13,7 @@ const Header = () => {
           alt="hamburguer"
         />
       </nav>
-      <div className="hidden md:flex pl-24 pr-12 h-24 self-start  bg-white backdrop-filter bg-opacity-5 backdrop-blur-xl lg:backdrop-blur-sm ">
+      <div className="hidden before-content md:flex pl-24 pr-12 h-24 self-start  bg-white backdrop-filter bg-opacity-5 backdrop-blur-xl lg:backdrop-blur-sm ">
         <div className="font-barlow text-white tracking-widest self-center lg:pr-16">
           <ul className="flex">
             <li>Home</li>

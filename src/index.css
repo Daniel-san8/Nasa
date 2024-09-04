@@ -3,3 +3,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .linhaHeader {
+    position: relative;
+  }
+
+  .before-content::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    background-color: red;
+    width: 120px;
+  }
+}
