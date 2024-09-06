@@ -1,6 +1,6 @@
 import React from "react";
 import { globalUse } from "../Context/GlobalContext";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const { menuActive, setMenuActive } = globalUse();
@@ -25,30 +25,48 @@ const Header = () => {
         <div className="font-barlow text-white tracking-widest self-center lg:pr-16">
           <ul className="flex whitespace-nowrap">
             <li>
-              <Link to="/">
-                <span className="font-bold mr-3 ml-10 after-content cursor-pointer">
-                  00
-                </span>
+              <NavLink
+                to="/"
+                className={({ isActive }: { isActive: boolean }) =>
+                  isActive ? "after-content" : ""
+                }
+              >
+                <span className="font-bold mr-3 ml-10 cursor-pointer">00</span>
                 <span className="cursor-pointer">Home</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="destination">
+              <NavLink
+                to="destination"
+                className={({ isActive }: { isActive: boolean }) =>
+                  isActive ? "after-content-destination" : ""
+                }
+              >
                 <span className="font-bold mr-3 ml-10 cursor-pointer">01</span>
                 <span className="cursor-pointer">Destination</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="crew">
+              <NavLink
+                to="crew"
+                className={({ isActive }: { isActive: boolean }) =>
+                  isActive ? "after-content-crew" : ""
+                }
+              >
                 <span className="font-bold mr-3 ml-12 cursor-pointer">02</span>
                 <span className="cursor-pointer">Crew</span>
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="technology">
+              <NavLink
+                to="technology"
+                className={({ isActive }: { isActive: boolean }) =>
+                  isActive ? "after-content-technology" : ""
+                }
+              >
                 <span className="font-bold mr-3 ml-12 cursor-pointer">03</span>
                 <span className="cursor-pointer">Technology</span>
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
