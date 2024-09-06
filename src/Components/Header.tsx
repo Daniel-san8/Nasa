@@ -1,5 +1,6 @@
 import React from "react";
 import { globalUse } from "../Context/GlobalContext";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { menuActive, setMenuActive } = globalUse();
@@ -24,22 +25,30 @@ const Header = () => {
         <div className="font-barlow text-white tracking-widest self-center lg:pr-16">
           <ul className="flex whitespace-nowrap">
             <li>
-              <span className="font-bold mr-3 ml-10 after-content cursor-pointer">
-                00
-              </span>
-              <span className="cursor-pointer">Home</span>
+              <Link to="/">
+                <span className="font-bold mr-3 ml-10 after-content cursor-pointer">
+                  00
+                </span>
+                <span className="cursor-pointer">Home</span>
+              </Link>
             </li>
             <li>
-              <span className="font-bold mr-3 ml-10 cursor-pointer">01</span>
-              <span className="cursor-pointer">Destination</span>
+              <Link to="destination">
+                <span className="font-bold mr-3 ml-10 cursor-pointer">01</span>
+                <span className="cursor-pointer">Destination</span>
+              </Link>
             </li>
             <li>
-              <span className="font-bold mr-3 ml-12 cursor-pointer">02</span>
-              <span className="cursor-pointer">Crew</span>
+              <Link to="crew">
+                <span className="font-bold mr-3 ml-12 cursor-pointer">02</span>
+                <span className="cursor-pointer">Crew</span>
+              </Link>
             </li>
             <li>
-              <span className="font-bold mr-3 ml-12 cursor-pointer">03</span>
-              <span className="cursor-pointer">Technology</span>
+              <Link to="technology">
+                <span className="font-bold mr-3 ml-12 cursor-pointer">03</span>
+                <span className="cursor-pointer">Technology</span>
+              </Link>
             </li>
           </ul>
         </div>
