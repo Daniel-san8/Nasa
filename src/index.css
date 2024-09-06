@@ -23,7 +23,7 @@
     position: absolute;
     background-color: white;
     opacity: 0.2;
-    width: 30%;
+    width: 25%;
     height: 1px;
     bottom: 50%;
     right: 95%;
@@ -93,7 +93,7 @@
 
   @media (min-width: 1300px) {
     .before-content::before {
-      width: 70%;
+      width: 60%;
       max-width: 100%;
     }
   }
