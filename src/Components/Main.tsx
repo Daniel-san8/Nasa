@@ -1,6 +1,6 @@
 import React from "react";
 
-const Main = () => {
+const Home = () => {
   return (
     <main className="font-bellefair p-6 text-blue-secondary md:px-20 md:py-32 lg:flex lg:px-40 lg:mt-72 lg:gap-x-8 ">
       <div className="flex flex-col items-center justify-center gap-y-12 xl:items-start">
@@ -24,4 +24,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;
