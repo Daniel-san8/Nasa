@@ -5,18 +5,19 @@ import { ProviderGlobal } from "./Context/GlobalContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Destination from "./Components/Destination";
 import Home from "./Components/Main";
+import Background from "./Components/Background";
 function App() {
   return (
     <BrowserRouter>
       <ProviderGlobal>
-        <div className="relative bg-home-mobile md:bg-home-tablet lg:bg-home-desktop h-full w-full bg-cover">
+        <Background>
           <Header />
           <MobileNavigation />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/destination" element={<Destination />} />
           </Routes>
-        </div>
+        </Background>
       </ProviderGlobal>
     </BrowserRouter>
   );
