@@ -4,23 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  background-image: url("home/background-home-mobile.jpg");
-  background-repeat: no-repeat;
-}
-
-@media (min-width: 768px) {
-  body {
-    background-image: url("home/background-home-tablet.jpg");
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    background-image: url("home/background-home-desktop.jpg");
-  }
-} */
-
 @layer utilities {
   .animationMenu {
     animation: menu 0.5s ease-out forwards;
