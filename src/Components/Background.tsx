@@ -4,13 +4,15 @@ import { globalUse } from "../Context/GlobalContext";
 const Background = ({ children }: PropsWithChildren) => {
   const { pathname } = globalUse();
 
-  React.useEffect(() => {
-    console.log(pathname);
-  }, [pathname]);
+  const backgroundClasses: Record<string, string> = {
+    "/": "bg-home-mobile md:bg-home-tablet lg:bg-home-desktop",
+    "/destination":
+      "bg-destination-mobile md:bg-destination-tablet lg:bg-destination-desktop",
+  };
+
+  const backgroundClass = backgroundClasses[pathname];
   return (
-    <div
-      className={`relative bg-home-mobile md:bg-home-tablet lg:bg-home-desktop h-full w-full bg-cover`}
-    >
+    <div className={`relative ${backgroundClass} h-full w-full bg-cover`}>
       {children}
     </div>
   );
