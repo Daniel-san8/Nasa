@@ -1,6 +1,6 @@
 import React from "react";
 import { globalUse } from "../Context/GlobalContext";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const MobileNavigation = () => {
   const navigation = React.useRef<null | HTMLDivElement>(null);
@@ -32,24 +32,24 @@ const MobileNavigation = () => {
       <div className="font-barlow text-white tracking-widest py-12">
         <ul className="flex flex-col gap-y-8 px-8">
           <li>
-            <Link to="/">
+            <NavLink to="/">
               <span className="font-bold pr-3">00</span>Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="destination">
+            <NavLink to="destination">
               <span className="font-bold pr-3">01</span>Destination
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="crew">
+            <NavLink to="crew">
               <span className="font-bold pr-3">02</span>Crew
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="technology">
+            <NavLink to="technology">
               <span className="font-bold pr-3">03</span>Technology
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

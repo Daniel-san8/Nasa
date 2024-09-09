@@ -34,7 +34,7 @@
     height: 3px;
     width: 10%;
     bottom: 0;
-    left: 17.5%;
+    left: 18.5%;
     background-color: white;
     position: absolute;
   }
@@ -44,7 +44,7 @@
     height: 3px;
     width: 16%;
     bottom: 0;
-    left: 32.5%;
+    left: 34.5%;
     background-color: white;
     position: absolute;
   }
@@ -72,12 +72,12 @@
   @media (max-width: 1023px) {
     .after-content::after {
       width: 10%;
-      left: 20%;
+      left: 20.5%;
     }
 
     .after-content-destination::after {
       width: 16%;
-      left: 36%;
+      left: 38.5%;
     }
 
     .after-content-crew::after {
