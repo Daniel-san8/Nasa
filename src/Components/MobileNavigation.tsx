@@ -1,6 +1,6 @@
 import React from "react";
 import { globalUse } from "../Context/GlobalContext";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const MobileNavigation = () => {
   const navigation = React.useRef<null | HTMLDivElement>(null);

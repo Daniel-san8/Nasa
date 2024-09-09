@@ -1,6 +1,24 @@
 import React from "react";
+import { Destinations, globalUse } from "../Context/GlobalContext";
 
 const Destination = () => {
+  const { data } = globalUse();
+  if (!data) return null;
+  if (!data.destinations) return null;
+
+  const { destinations } = data;
+
+  const [planet, setPlanet] = React.useState("Moon");
+  const [planetSelect, setPlanetSelect] = React.useState<Destinations[]>([]);
+  React.useEffect(() => {
+    const teste = destinations.find((dest) => dest.name === planet);
+    if (teste) {
+      setPlanetSelect([]);
+      planetSelect.push(teste);
+    }
+  }, [planet]);
+  console.log(planetSelect);
+
   return (
     <div className="h-full w-full flex flex-col items-center font-barlow">
       <h1 className="text-white tracking-wide p-6">
@@ -16,10 +34,18 @@ const Destination = () => {
 
       <div>
         <ul className="flex text-blue-secondary gap-x-8">
-          <li className="cursor-pointer">Moon</li>
-          <li className="cursor-pointer">Mars</li>
-          <li className="cursor-pointer">Europa</li>
-          <li className="cursor-pointer">Titan</li>
+          <li className="cursor-pointer" onClick={() => setPlanet("Moon")}>
+            Moon
+          </li>
+          <li className="cursor-pointer" onClick={() => setPlanet("Mars")}>
+            Mars
+          </li>
+          <li className="cursor-pointer" onClick={() => setPlanet("Europa")}>
+            Europa
+          </li>
+          <li className="cursor-pointer" onClick={() => setPlanet("Titan")}>
+            Titan
+          </li>
         </ul>
       </div>
 

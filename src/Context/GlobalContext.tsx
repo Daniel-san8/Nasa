@@ -19,7 +19,7 @@ type Crew = {
   role: string;
 };
 
-type Destinations = {
+export type Destinations = {
   description: string;
   distance: string;
   images: {
