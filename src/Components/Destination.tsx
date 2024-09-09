@@ -2,7 +2,7 @@ import React from "react";
 
 const Destination = () => {
   return (
-    <div className="h-full flex flex-col items-center font-barlow">
+    <div className="h-full w-full flex flex-col items-center font-barlow">
       <h1 className="text-white tracking-wide p-6">
         <span className="font-bold opacity-25 pr-6">01</span>Escolha o seu
         destino
@@ -34,7 +34,7 @@ const Destination = () => {
       </div>
 
       <div className="pt-6">
-        <div className="flex flex-col items-center pb-6 gap-y-3">
+        <div className="flex flex-col items-center pb-6 gap-y-3 md:flex-initial">
           <h2 className="text-blue-secondary text-sm">Med. Distancia</h2>
           <h3 className="text-white text-3xl">384,400 km</h3>
         </div>
