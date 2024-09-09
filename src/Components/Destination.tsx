@@ -9,12 +9,12 @@ const Destination = () => {
   const { destinations } = data;
 
   const [planet, setPlanet] = React.useState("Moon");
-  const teste = destinations.find((dest) => dest.name === planet);
+  const planetObj = destinations.find((dest) => dest.name === planet);
   const planetSelect: Destinations[] = [];
   React.useEffect(() => {
-    if (teste) {
+    if (planetObj) {
       planetSelect.shift();
-      planetSelect.push(teste);
+      planetSelect.push(planetObj);
     }
   }, [planet]);
 
