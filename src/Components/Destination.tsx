@@ -23,7 +23,7 @@ const Destination = () => {
   }, [planet]);
 
   return (
-    <div className="h-full w-full flex flex-col items-center font-barlow">
+    <div className="h-full w-full flex flex-col items-center font-barlow lg:flex-row">
       <h1 className="text-white tracking-wide p-6 md:self-start">
         <span className="font-bold opacity-25 pr-6">01</span>Escolha o seu
         destino
@@ -31,24 +31,26 @@ const Destination = () => {
 
       <ImagePlanet image={image} />
 
-      <div className="md:pt-11">
-        <ul className="flex text-blue-secondary gap-x-8">
-          <li className="cursor-pointer" onClick={() => setPlanet("Moon")}>
-            Moon
-          </li>
-          <li className="cursor-pointer" onClick={() => setPlanet("Mars")}>
-            Mars
-          </li>
-          <li className="cursor-pointer" onClick={() => setPlanet("Europa")}>
-            Europa
-          </li>
-          <li className="cursor-pointer" onClick={() => setPlanet("Titan")}>
-            Titan
-          </li>
-        </ul>
-      </div>
+      <div className="flex flex-col items-center">
+        <div className="md:pt-11">
+          <ul className="flex text-blue-secondary gap-x-8">
+            <li className="cursor-pointer" onClick={() => setPlanet("Moon")}>
+              Moon
+            </li>
+            <li className="cursor-pointer" onClick={() => setPlanet("Mars")}>
+              Mars
+            </li>
+            <li className="cursor-pointer" onClick={() => setPlanet("Europa")}>
+              Europa
+            </li>
+            <li className="cursor-pointer" onClick={() => setPlanet("Titan")}>
+              Titan
+            </li>
+          </ul>
+        </div>
 
-      <TextPlanet textPlanet={planetObj ? planetObj : null} />
+        <TextPlanet textPlanet={planetObj ? planetObj : null} />
+      </div>
     </div>
   );
 };
