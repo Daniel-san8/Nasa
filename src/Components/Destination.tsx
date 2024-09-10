@@ -1,5 +1,6 @@
 import React from "react";
 import { Destinations, globalUse } from "../Context/GlobalContext";
+import ImagePlanet from "./CompDestination/ImagePlanet";
 
 const Destination = () => {
   const { data } = globalUse();
@@ -9,12 +10,18 @@ const Destination = () => {
   const { destinations } = data;
 
   const [planet, setPlanet] = React.useState("Moon");
+
   const planetObj = destinations.find((dest) => dest.name === planet);
+
   const planetSelect: Destinations[] = [];
+
+  const [image, setImage] = React.useState("");
+
   React.useEffect(() => {
     if (planetObj) {
       planetSelect.shift();
       planetSelect.push(planetObj);
+      setImage(planetObj.images.png);
     }
   }, [planet]);
 
@@ -25,11 +32,7 @@ const Destination = () => {
         destino
       </h1>
 
-      <div className="px-6">
-        <div className="py-12">
-          <img src="destination/image-moon.png" width="150px" height="150px" />
-        </div>
-      </div>
+      <ImagePlanet image={image} />
 
       <div>
         <ul className="flex text-blue-secondary gap-x-8">
