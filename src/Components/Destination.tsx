@@ -24,14 +24,14 @@ const Destination = () => {
 
   return (
     <div className="h-full w-full flex flex-col items-center font-barlow">
-      <h1 className="text-white tracking-wide p-6">
+      <h1 className="text-white tracking-wide p-6 md:self-start">
         <span className="font-bold opacity-25 pr-6">01</span>Escolha o seu
         destino
       </h1>
 
       <ImagePlanet image={image} />
 
-      <div>
+      <div className="md:pt-11">
         <ul className="flex text-blue-secondary gap-x-8">
           <li className="cursor-pointer" onClick={() => setPlanet("Moon")}>
             Moon
@@ -48,7 +48,7 @@ const Destination = () => {
         </ul>
       </div>
 
-      <TextPlanet textPlanet={planetObj ? planetObj : undefined} />
+      <TextPlanet textPlanet={planetObj ? planetObj : null} />
     </div>
   );
 };

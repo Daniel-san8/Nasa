@@ -76,8 +76,8 @@ export const ProviderGlobal = ({ children }: PropsWithChildren) => {
         const api = axios.get("data.json");
         const { data } = await api;
         setData(data);
-      } catch (error) {
-        console.log(error);
+      } catch (error: unknown) {
+        if (error instanceof Error) console.log(error.message);
       }
     }
     reqApi();
