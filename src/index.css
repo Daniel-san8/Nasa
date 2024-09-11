@@ -11,10 +11,10 @@
 
   @keyframes menu {
     from {
-      transform: scale(0.8);
+      opacity: 0;
     }
     to {
-      transform: translateX(initial);
+      opacity: 1;
     }
   }
 
@@ -54,7 +54,7 @@
     height: 3px;
     width: 10%;
     bottom: 0;
-    left: 54%;
+    left: 56.5%;
     background-color: white;
     position: absolute;
   }

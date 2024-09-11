@@ -9,7 +9,7 @@ interface UIGlobal {
   data: UIData | null;
 }
 
-type Crew = {
+export type Crew = {
   bio: string;
   images: {
     png: string;
