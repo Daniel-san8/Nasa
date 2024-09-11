@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 import { globalUse } from "../Context/GlobalContext";
 
 const Background = ({ children }: PropsWithChildren) => {
@@ -8,6 +8,7 @@ const Background = ({ children }: PropsWithChildren) => {
     "/": "bg-home-mobile md:bg-home-tablet lg:bg-home-desktop",
     "/destination":
       "bg-destination-mobile md:bg-destination-tablet lg:bg-destination-desktop",
+    "/crew": "bg-crew-mobile md:bg-crew-tablet lg:bg-crew-desktop",
   };
 
   const backgroundClass = backgroundClasses[pathname];

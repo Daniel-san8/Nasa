@@ -1,5 +1,3 @@
-import React from "react";
-
 type textPlanet = {
   description: string;
   distance: string;
