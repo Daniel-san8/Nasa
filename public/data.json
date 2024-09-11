@@ -1,0 +1,108 @@
+{
+  "destinations": [
+    {
+      "name": "Moon",
+      "images": {
+        "png": "destination/image-moon.png",
+        "webp": "destination/image-moon.webp"
+      },
+      "description": "Veja nosso planeta como você nunca viu antes. Uma viagem relaxante, perfeita para ajudar a recuperar a perspectiva e voltar revigorado. Enquanto estiver lá, conheça um pouco da história visitando os locais de pouso da Luna 2 e da Apollo 11.",
+      "distance": "384,400 km",
+      "travel": "3 dias"
+    },
+    {
+      "name": "Mars",
+      "images": {
+        "png": "destination/image-mars.png",
+        "webp": "destination/image-mars.webp"
+      },
+      "description": "Não se esqueça de levar suas botas de caminhada. Você precisará delas para enfrentar o Olympus Mons, a montanha planetária mais alta do nosso sistema solar. Ela é duas vezes e meia o tamanho do Everest!",
+      "distance": "225 mil. km",
+      "travel": "9 meses"
+    },
+    {
+      "name": "Europa",
+      "images": {
+        "png": "destination/image-europa.png",
+        "webp": "destination/image-europa.webp"
+      },
+      "description": "A menor das quatro luas galileanas que orbitam Júpiter, Europa é o sonho de qualquer amante do inverno. Com uma superfície gelada, é perfeita para patinar no gelo, praticar curling, jogar hóquei ou simplesmente relaxar em sua confortável cabana de inverno.",
+      "distance": "628 mil. km",
+      "travel": "3 anos"
+    },
+    {
+      "name": "Titan",
+      "images": {
+        "png": "destination/image-titan.png",
+        "webp": "destination/image-titan.webp"
+      },
+      "description": "A única lua conhecida por ter uma atmosfera densa, além da Terra, Titã é um lar longe de casa (apenas algumas centenas de graus mais frio!). Como bônus, você terá vistas impressionantes dos anéis de Saturno.",
+      "distance": "1.6 bil. km",
+      "travel": "7 anos"
+    }
+  ],
+  "crew": [
+    {
+      "name": "Douglas Hurley",
+      "images": {
+        "png": "crew/image-douglas-hurley.png",
+        "webp": "crew/image-douglas-hurley.webp"
+      },
+      "role": "Commander",
+      "bio": "Douglas Gerald Hurley é um engenheiro americano, ex-piloto do Corpo de Fuzileiros Navais e ex-astronauta da NASA. Ele foi lançado ao espaço pela terceira vez, como comandante da Crew Dragon Demo-2."
+    },
+    {
+      "name": "Mark Shuttleworth",
+      "images": {
+        "png": "crew/image-mark-shuttleworth.png",
+        "webp": "crew/image-mark-shuttleworth.webp"
+      },
+      "role": "Mission Specialist",
+      "bio": "Mark Richard Shuttleworth é o fundador e CEO da Canonical, a empresa responsável pelo sistema operacional Ubuntu, baseado em Linux. Shuttleworth se tornou o primeiro sul-africano a viajar para o espaço como turista espacial."
+    },
+    {
+      "name": "Victor Glover",
+      "images": {
+        "png": "crew/image-victor-glover.png",
+        "webp": "crew/image-victor-glover.webp"
+      },
+      "role": "Pilot",
+      "bio": "Piloto do primeiro voo operacional do SpaceX Crew Dragon para a Estação Espacial Internacional, Glover é comandante da Marinha dos EUA, onde pilota um F/A-18. Ele foi membro da tripulação da Expedição 64 e serviu como engenheiro de voo de sistemas da estação."
+    },
+    {
+      "name": "Anousheh Ansari",
+      "images": {
+        "png": "crew/image-anousheh-ansari.png",
+        "webp": "crew/image-anousheh-ansari.webp"
+      },
+      "role": "Flight Engineer",
+      "bio": "Anousheh Ansari é uma engenheira iraniano-americana e cofundadora da Prodea Systems. Ansari foi a quarta turista espacial autofinanciada, a primeira mulher autofinanciada a voar para a ISS e a primeira iraniana no espaço."
+    }
+  ],
+  "technology": [
+    {
+      "name": "Launch vehicle",
+      "images": {
+        "portrait": "technology/image-launch-vehicle-portrait.jpg",
+        "landscape": "technology/image-launch-vehicle-landscape.jpg"
+      },
+      "description": "Um veículo de lançamento, ou foguete transportador, é um veículo movido a foguete usado para transportar uma carga útil da superfície da Terra para o espaço, geralmente para a órbita terrestre ou além. Nosso foguete transportador WEB-X é o mais poderoso em operação. Com 150 metros de altura, é uma visão inspiradora na plataforma de lançamento!"
+    },
+    {
+      "name": "Spaceport",
+      "images": {
+        "portrait": "technology/image-spaceport-portrait.jpg",
+        "landscape": "technology/image-spaceport-landscape.jpg"
+      },
+      "description": "Um espaçoporto ou cosmódromo é um local de lançamento (ou recebimento) de espaçonaves, análogo ao porto marítimo para navios ou ao aeroporto para aeronaves. Baseado no famoso Cabo Canaveral, o nosso espaçoporto está idealmente situado para aproveitar a rotação da Terra durante o lançamento."
+    },
+    {
+      "name": "Space capsule",
+      "images": {
+        "portrait": "technology/image-space-capsule-portrait.jpg",
+        "landscape": "technology/image-space-capsule-landscape.jpg"
+      },
+      "description": "Uma cápsula espacial é uma espaçonave frequentemente tripulada que utiliza uma cápsula de reentrada com formato rombudo para reentrar na atmosfera da Terra sem asas. Nossa cápsula é onde você passará seu tempo durante o voo e inclui uma academia espacial, cinema e muitas outras atividades para mantê-lo entretido."
+    }
+  ]
+}
