@@ -4,18 +4,18 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "home-mobile": "url('home/background-home-mobile.jpg')",
-        "home-tablet": "url('home/background-home-tablet.jpg')",
-        "home-desktop": "url('home/background-home-desktop.jpg')",
+        "home-mobile": "url('./public/home/background-home-mobile.jpg')",
+        "home-tablet": "url('./public/home/background-home-tablet.jpg')",
+        "home-desktop": "url('./public/home/background-home-desktop.jpg')",
         "destination-mobile":
-          "url('destination/background-destination-mobile.jpg')",
+          "url('./public/destination/background-destination-mobile.jpg')",
         "destination-tablet":
-          "url('destination/background-destination-tablet.jpg')",
+          "url('./public/destination/background-destination-tablet.jpg')",
         "destination-desktop":
-          "url('destination/background-destination-desktop.jpg')",
-        "crew-mobile": "url('crew/background-crew-mobile.jpg')",
-        "crew-tablet": "url('crew/background-crew-tablet.jpg')",
-        "crew-desktop": "url('crew/background-crew-desktop.jpg')",
+          "url('./public/destination/background-destination-desktop.jpg')",
+        "crew-mobile": "url('./public/crew/background-crew-mobile.jpg')",
+        "crew-tablet": "url('./public/crew/background-crew-tablet.jpg')",
+        "crew-desktop": "url('./public/crew/background-crew-desktop.jpg')",
       },
       fontFamily: {
         barlow: ["barlow", "sans serif"],
