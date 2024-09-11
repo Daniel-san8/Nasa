@@ -4,18 +4,18 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "home-mobile": "url('home/background-home-mobile.jpg')",
-        "home-tablet": "url('home/background-home-tablet.jpg')",
-        "home-desktop": "url('home/background-home-desktop.jpg')",
+        "home-mobile": "url('/home/background-home-mobile.jpg')",
+        "home-tablet": "url('/home/background-home-tablet.jpg')",
+        "home-desktop": "url('/home/background-home-desktop.jpg')",
         "destination-mobile":
-          "url('destination/background-destination-mobile.jpg')",
+          "url('/destination/background-destination-mobile.jpg')",
         "destination-tablet":
-          "url('destination/background-destination-tablet.jpg')",
+          "url('/destination/background-destination-tablet.jpg')",
         "destination-desktop":
-          "url('destination/background-destination-desktop.jpg')",
-        "crew-mobile": "url('crew/background-crew-mobile.jpg')",
-        "crew-tablet": "url('crew/background-crew-tablet.jpg')",
-        "crew-desktop": "url('crew/background-crew-desktop.jpg')",
+          "url('/destination/background-destination-desktop.jpg')",
+        "crew-mobile": "url('/crew/background-crew-mobile.jpg')",
+        "crew-tablet": "url('/crew/background-crew-tablet.jpg')",
+        "crew-desktop": "url('/crew/background-crew-desktop.jpg')",
       },
       fontFamily: {
         barlow: ["barlow", "sans serif"],
