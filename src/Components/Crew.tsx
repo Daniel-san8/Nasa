@@ -5,7 +5,10 @@ import ImageCrew from "./CompCrew/ImageCrew";
 
 const Crew = () => {
   const { data } = globalUse();
-
+  const douglasRef = React.useRef<HTMLLIElement>(null);
+  const markRef = React.useRef<HTMLLIElement>(null);
+  const victorRef = React.useRef<HTMLLIElement>(null);
+  const anoushehRef = React.useRef<HTMLLIElement>(null);
   const [persona, setPersona] = React.useState("Douglas Hurley");
 
   if (!data) return null;
@@ -23,10 +26,10 @@ const Crew = () => {
       <TextCrew persona={personaSelect} />
 
       <ul className="flex pt-12">
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
+        <li ref={douglasRef}></li>
+        <li ref={markRef}></li>
+        <li ref={victorRef}></li>
+        <li ref={anoushehRef}></li>
       </ul>
 
       <ImageCrew image={personaSelect?.images.png} />
