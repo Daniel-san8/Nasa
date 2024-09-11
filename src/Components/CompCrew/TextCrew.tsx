@@ -6,8 +6,7 @@ type Persona = {
   role: string;
 };
 
-const TextCrew = ({ persona }: { persona: Persona | undefined }) => {
-  console.log(persona);
+const TextCrew = ({ persona }: { persona?: Persona }) => {
   if (persona)
     return (
       <div className="flex flex-col items-center pt-16">
