@@ -6,13 +6,10 @@ import TextPlanet from "./CompDestination/TextPlanet";
 const Destination = () => {
   const { data } = globalUse();
   if (!data) return null;
-  if (!data.destinations) return null;
-
-  const { destinations } = data;
 
   const [planet, setPlanet] = React.useState("Moon");
 
-  const planetObj = destinations.find((dest) => dest.name === planet);
+  const planetObj = data.destinations?.find((dest) => dest.name === planet);
 
   const [image, setImage] = React.useState("");
   React.useEffect(() => {
