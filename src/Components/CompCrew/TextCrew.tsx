@@ -10,9 +10,11 @@ const TextCrew = ({ persona }: { persona?: Persona }) => {
   if (persona)
     return (
       <div className="flex flex-col items-center pt-16">
-        <h2>{persona.role}</h2>
-        <h3>{persona.name}</h3>
-        <p className="text-center pt-6">{persona.bio}</p>
+        <h2 className="text-2xl text-blue-secondary">{persona.role}</h2>
+        <h3 className="text-4xl text-white">{persona.name}</h3>
+        <p className="text-center text-blue-secondary leading-6 pt-6">
+          {persona.bio}
+        </p>
       </div>
     );
 };
