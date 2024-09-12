@@ -25,11 +25,11 @@ const Crew = () => {
 
       <TextCrew persona={personaSelect} />
 
-      <ul className="flex pt-12">
-        <li ref={douglasRef}></li>
-        <li ref={markRef}></li>
-        <li ref={victorRef}></li>
-        <li ref={anoushehRef}></li>
+      <ul className="flex pt-12 gap-x-4">
+        <li ref={douglasRef} className="h-2 w-2 bg-white rounded"></li>
+        <li ref={markRef} className="h-2 w-2 bg-white rounded"></li>
+        <li ref={victorRef} className="h-2 w-2 bg-white rounded"></li>
+        <li ref={anoushehRef} className="h-2 w-2 bg-white rounded"></li>
       </ul>
 
       <ImageCrew image={personaSelect?.images.png} />
