@@ -9,6 +9,8 @@ const Background = ({ children }: PropsWithChildren) => {
     "/destination":
       "bg-destination-mobile md:bg-destination-tablet lg:bg-destination-desktop",
     "/crew": "bg-crew-mobile md:bg-crew-tablet lg:bg-crew-desktop",
+    "/technology":
+      "bg-technology-mobile md:bg-technology-tablet lg:bg-technology-desktop",
   };
 
   const backgroundClass = backgroundClasses[pathname];
