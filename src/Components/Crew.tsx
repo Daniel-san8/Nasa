@@ -43,7 +43,7 @@ const Crew = () => {
   return (
     <div className="p-6 flex flex-col items-center justify-center h-full lg:flex-row">
       <div className="flex flex-col items-center">
-        <h1 className="text-white tracking-wide ">
+        <h1 className="text-white tracking-wide md:self-start md:pt-10">
           <span className="font-bold opacity-25 pr-6 lg:text-nowrap ">02</span>
           Escolha sua tripulação
         </h1>
