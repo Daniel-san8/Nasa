@@ -14,16 +14,14 @@ const Crew = () => {
 
   const [persona, setPersona] = React.useState("Douglas Hurley");
 
+  // pega o objeto específico pra retornar
   const personaSelect = data?.crew.find(
     (comander) => comander.name === persona
   );
 
-  const [estiloSelectAtivo] = React.useState(
-    "h-2 w-2 bg-white rounded cursor-pointer"
-  );
-  const [estiloSelectDesativado] = React.useState(
-    "h-2 w-2 bg-barra-after opacity-25 rounded cursor-pointer"
-  );
+  const estiloSelectAtivo = "h-2 w-2 bg-white rounded cursor-pointer";
+  const estiloSelectDesativado =
+    "h-2 w-2 bg-barra-after opacity-25 rounded cursor-pointer";
 
   function pegarId(e?: React.MouseEvent<HTMLLIElement>) {
     const idTarget = e?.target as HTMLLIElement;
@@ -43,40 +41,42 @@ const Crew = () => {
   if (!data) return null;
 
   return (
-    <div className="p-6 flex flex-col items-center h-full">
-      <h1 className="text-white tracking-wide ">
-        <span className="font-bold opacity-25 pr-6 lg:text-nowrap ">02</span>
-        Escolha sua tripulação
-      </h1>
+    <div className="p-6 flex flex-col items-center justify-center h-full lg:flex-row">
+      <div className="flex flex-col items-center">
+        <h1 className="text-white tracking-wide ">
+          <span className="font-bold opacity-25 pr-6 lg:text-nowrap ">02</span>
+          Escolha sua tripulação
+        </h1>
 
-      <TextCrew persona={personaSelect} />
+        <TextCrew persona={personaSelect} />
 
-      <ul className="flex pt-12 gap-x-4" ref={ulPai}>
-        <li
-          ref={douglasRef}
-          className={estiloSelectAtivo}
-          id="Douglas Hurley"
-          onClick={pegarId}
-        ></li>
-        <li
-          ref={markRef}
-          className={estiloSelectDesativado}
-          id="Mark Shuttleworth"
-          onClick={pegarId}
-        ></li>
-        <li
-          ref={victorRef}
-          className={estiloSelectDesativado}
-          id="Victor Glover"
-          onClick={pegarId}
-        ></li>
-        <li
-          ref={anoushehRef}
-          className={estiloSelectDesativado}
-          id="Anousheh Ansari"
-          onClick={pegarId}
-        ></li>
-      </ul>
+        <ul className="flex pt-12 gap-x-4" ref={ulPai}>
+          <li
+            ref={douglasRef}
+            className={estiloSelectAtivo}
+            id="Douglas Hurley"
+            onClick={pegarId}
+          ></li>
+          <li
+            ref={markRef}
+            className={estiloSelectDesativado}
+            id="Mark Shuttleworth"
+            onClick={pegarId}
+          ></li>
+          <li
+            ref={victorRef}
+            className={estiloSelectDesativado}
+            id="Victor Glover"
+            onClick={pegarId}
+          ></li>
+          <li
+            ref={anoushehRef}
+            className={estiloSelectDesativado}
+            id="Anousheh Ansari"
+            onClick={pegarId}
+          ></li>
+        </ul>
+      </div>
 
       <ImageCrew image={personaSelect?.images.png} />
     </div>
