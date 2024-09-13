@@ -10,6 +10,7 @@ const Crew = () => {
   const markRef = React.useRef<HTMLLIElement>(null);
   const victorRef = React.useRef<HTMLLIElement>(null);
   const anoushehRef = React.useRef<HTMLLIElement>(null);
+  const teste = React.useRef<HTMLUListElement>(null);
 
   const [persona, setPersona] = React.useState("Douglas Hurley");
 
@@ -17,13 +18,22 @@ const Crew = () => {
     (comander) => comander.name === persona
   );
 
-  React.useEffect(() => {
-    console.log("opa");
-  }, [persona]);
+  const [estiloSelectAtivo] = React.useState(
+    "h-2 w-2 bg-white rounded cursor-pointer"
+  );
+  const [estiloSelectDesativado] = React.useState(
+    "h-2 w-2 bg-barra-after opacity-25 rounded cursor-pointer"
+  );
 
   function pegarId(e?: React.MouseEvent<HTMLLIElement>) {
+    if (teste.current) {
+      const filhos = teste.current.childNodes;
+      const ok = [...filhos] as HTMLLIElement[];
+      ok.forEach((item) => (item.className = estiloSelectDesativado));
+    }
     const idTarget = e?.target as HTMLLIElement;
     setPersona(idTarget.id);
+    idTarget.className = estiloSelectAtivo;
   }
 
   if (!data) return null;
@@ -37,28 +47,28 @@ const Crew = () => {
 
       <TextCrew persona={personaSelect} />
 
-      <ul className="flex pt-12 gap-x-4">
+      <ul className="flex pt-12 gap-x-4" ref={teste}>
         <li
           ref={douglasRef}
-          className="h-2 w-2 bg-white rounded"
+          className={estiloSelectAtivo}
           id="Douglas Hurley"
           onClick={pegarId}
         ></li>
         <li
           ref={markRef}
-          className="h-2 w-2 bg-barra-after opacity-25 rounded"
+          className={estiloSelectDesativado}
           id="Mark Shuttleworth"
           onClick={pegarId}
         ></li>
         <li
           ref={victorRef}
-          className="h-2 w-2 bg-barra-after opacity-25 rounded"
+          className={estiloSelectDesativado}
           id="Victor Glover"
           onClick={pegarId}
         ></li>
         <li
           ref={anoushehRef}
-          className="h-2 w-2 bg-barra-after opacity-25 rounded"
+          className={estiloSelectDesativado}
           id="Anousheh Ansari"
           onClick={pegarId}
         ></li>
