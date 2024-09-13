@@ -19,9 +19,10 @@ const Crew = () => {
     (comander) => comander.name === persona
   );
 
-  const estiloSelectAtivo = "h-2 w-2 bg-white rounded cursor-pointer";
+  const estiloSelectAtivo =
+    "h-2 w-2 bg-white rounded cursor-pointer lg:h-3 lg:w-3 lg:rounded-lg";
   const estiloSelectDesativado =
-    "h-2 w-2 bg-barra-after opacity-25 rounded cursor-pointer";
+    "h-2 w-2 bg-barra-after opacity-25 rounded cursor-pointer lg:h-3 lg:w-3 lg:rounded-lg";
 
   function pegarId(e?: React.MouseEvent<HTMLLIElement>) {
     const idTarget = e?.target as HTMLLIElement;
@@ -41,16 +42,19 @@ const Crew = () => {
   if (!data) return null;
 
   return (
-    <div className="p-6 flex flex-col items-center justify-center h-full lg:flex-row">
-      <div className="flex flex-col items-center">
-        <h1 className="text-white tracking-wide md:self-start md:pt-10">
+    <div className="p-6 flex flex-col items-center justify-center h-full lg:flex-row lg:px-40">
+      <div className="flex flex-col items-center lg:h-full">
+        <h1 className="text-white tracking-wide md:self-start md:pt-10 lg:pb-14">
           <span className="font-bold opacity-25 pr-6 lg:text-nowrap ">02</span>
           Escolha sua tripulação
         </h1>
 
         <TextCrew persona={personaSelect} />
 
-        <ul className="flex pt-12 gap-x-4" ref={ulPai}>
+        <ul
+          className="flex pt-12 gap-x-4 lg:self-start lg:pt-32 lg:pb-16"
+          ref={ulPai}
+        >
           <li
             ref={douglasRef}
             className={estiloSelectAtivo}
