@@ -10,7 +10,7 @@ const Crew = () => {
   const markRef = React.useRef<HTMLLIElement>(null);
   const victorRef = React.useRef<HTMLLIElement>(null);
   const anoushehRef = React.useRef<HTMLLIElement>(null);
-  const teste = React.useRef<HTMLUListElement>(null);
+  const ulPai = React.useRef<HTMLUListElement>(null);
 
   const [persona, setPersona] = React.useState("Douglas Hurley");
 
@@ -26,10 +26,10 @@ const Crew = () => {
   );
 
   function pegarId(e?: React.MouseEvent<HTMLLIElement>) {
-    if (teste.current) {
-      const filhos = teste.current.childNodes;
-      const ok = [...filhos] as HTMLLIElement[];
-      ok.forEach((item) => (item.className = estiloSelectDesativado));
+    if (ulPai.current) {
+      const ulFilhos = ulPai.current.childNodes;
+      const arrUlFilhos = [...ulFilhos] as HTMLLIElement[];
+      arrUlFilhos.forEach((item) => (item.className = estiloSelectDesativado));
     }
     const idTarget = e?.target as HTMLLIElement;
     setPersona(idTarget.id);
@@ -47,7 +47,7 @@ const Crew = () => {
 
       <TextCrew persona={personaSelect} />
 
-      <ul className="flex pt-12 gap-x-4" ref={teste}>
+      <ul className="flex pt-12 gap-x-4" ref={ulPai}>
         <li
           ref={douglasRef}
           className={estiloSelectAtivo}
