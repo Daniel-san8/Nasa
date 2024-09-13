@@ -26,14 +26,18 @@ const Crew = () => {
   );
 
   function pegarId(e?: React.MouseEvent<HTMLLIElement>) {
+    const idTarget = e?.target as HTMLLIElement;
+    setPersona(idTarget.id);
+    atualizaEstilo(idTarget);
+  }
+
+  function atualizaEstilo(id: HTMLLIElement) {
     if (ulPai.current) {
       const ulFilhos = ulPai.current.childNodes;
       const arrUlFilhos = [...ulFilhos] as HTMLLIElement[];
       arrUlFilhos.forEach((item) => (item.className = estiloSelectDesativado));
     }
-    const idTarget = e?.target as HTMLLIElement;
-    setPersona(idTarget.id);
-    idTarget.className = estiloSelectAtivo;
+    id.className = estiloSelectAtivo;
   }
 
   if (!data) return null;
