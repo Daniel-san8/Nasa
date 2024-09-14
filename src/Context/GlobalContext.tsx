@@ -33,8 +33,8 @@ export type Destinations = {
 type Technology = {
   description: string;
   images: {
-    png: string;
-    webp: string;
+    landscape: string;
+    portrait: string;
   };
   name: string;
 };
