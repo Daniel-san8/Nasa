@@ -13,6 +13,28 @@ const Technology = () => {
   const estadoOff =
     "flex justify-center items-center w-10 h-10 border border-white border-opacity-25 rounded-3xl text-white cursor-pointer";
 
+  const [largura, setLargura] = React.useState(0);
+
+  const [image, setImage] = React.useState<"landscape" | "portrait">(
+    "portrait"
+  );
+
+  function atualizaImage() {
+    setLargura(window.innerWidth);
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("resize", atualizaImage);
+
+    if (largura >= 768) {
+      setImage("landscape");
+    } else setImage("portrait");
+
+    return () => {
+      window.removeEventListener("resize", atualizaImage);
+    };
+  }, [largura]);
+
   function atualizaComponentes(event: React.MouseEvent) {
     const liList = elementoUl.current?.childNodes as NodeListOf<HTMLLIElement>;
     const elementoLi = event.target as HTMLLIElement;
@@ -36,7 +58,7 @@ const Technology = () => {
       <div className="w-full">
         <img
           className="h-72 w-screen"
-          src={data.technology[indice]?.images.portrait}
+          src={`${data?.technology[indice].images[image]}`}
         />
       </div>
 
