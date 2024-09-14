@@ -55,7 +55,7 @@ const Technology = () => {
         Lançamento espacial 101
       </h1>
 
-      <div className="flex flex-col lg:flex-row-reverse lg:items-center lg:pl-32 lg:pb-16">
+      <div className="flex flex-col items-center lg:flex-row-reverse lg:items-center lg:pl-32 lg:pb-16">
         <div className="w-full">
           <img
             className="h-72 w-full lg:h-96"
