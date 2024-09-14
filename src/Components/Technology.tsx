@@ -28,7 +28,7 @@ const Technology = () => {
   if (!data) return null;
   return (
     <div className="flex flex-col items-center h-full">
-      <h1 className="text-white tracking-wide pt-6 pb-20">
+      <h1 className="text-white tracking-wide pt-6 pb-20 md:self-start md:px-10 md:pt-10">
         <span className="font-bold opacity-25 pr-6 lg:text-nowrap">03</span>
         Lançamento espacial 101
       </h1>
@@ -57,7 +57,7 @@ const Technology = () => {
         <h3 className="text-4xl text-white ">
           {data.technology[indice]?.name}
         </h3>
-        <p className="text-center text-blue-secondary leading-6 pt-4 px-6 pb-12">
+        <p className="text-center text-blue-secondary leading-6 pt-4 px-6 pb-12 md:px-32">
           {data.technology[indice]?.description}
         </p>
       </div>
