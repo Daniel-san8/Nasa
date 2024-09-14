@@ -6,6 +6,25 @@ const Technology = () => {
 
   const [indice, setIndice] = React.useState(0);
 
+  const elementoUl = React.useRef<HTMLUListElement>(null);
+
+  const estadoActive =
+    "bg-white w-10 h-10 flex justify-center items-center rounded-3xl cursor-pointer";
+  const estadoOff =
+    "flex justify-center items-center w-10 h-10 border border-white border-opacity-25 rounded-3xl text-white cursor-pointer";
+
+  function atualizaComponentes(event: React.MouseEvent) {
+    const liList = elementoUl.current?.childNodes as NodeListOf<HTMLLIElement>;
+    const elementoLi = event.target as HTMLLIElement;
+    const indiceElementoLi = Number(elementoLi.innerHTML) - 1;
+
+    liList.forEach((li) => (li.className = estadoOff));
+
+    liList[indiceElementoLi].className = estadoActive;
+
+    setIndice(indiceElementoLi);
+  }
+
   if (!data) return null;
   return (
     <div className="flex flex-col items-center h-full">
@@ -21,23 +40,14 @@ const Technology = () => {
         />
       </div>
 
-      <ul className="flex gap-x-4 pt-8 pb-10">
-        <li
-          className="bg-white w-10 h-10 flex justify-center items-center rounded-3xl cursor-pointer"
-          onClick={() => setIndice(0)}
-        >
+      <ul className="flex gap-x-4 pt-8 pb-10" ref={elementoUl}>
+        <li className={estadoActive} onClick={atualizaComponentes}>
           1
         </li>
-        <li
-          className="flex justify-center items-center w-10 h-10 border border-white border-opacity-25 rounded-3xl text-white cursor-pointer"
-          onClick={() => setIndice(1)}
-        >
+        <li className={estadoOff} onClick={atualizaComponentes}>
           2
         </li>
-        <li
-          className="flex justify-center items-center w-10 h-10 border border-white border-opacity-25 rounded-3xl text-white cursor-pointer"
-          onClick={() => setIndice(2)}
-        >
+        <li className={estadoOff} onClick={atualizaComponentes}>
           3
         </li>
       </ul>
