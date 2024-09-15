@@ -7,7 +7,7 @@ type Persona = {
 const TextCrew = ({ persona }: { persona?: Persona }) => {
   if (persona)
     return (
-      <div className="flex flex-col items-center pt-16 md:px-32 lg:px-0">
+      <div className="flex h-full flex-col items-center pt-16 md:px-32 lg:px-0">
         <h2 className="text-2xl text-blue-secondary  lg:self-start">
           {persona.role}
         </h2>

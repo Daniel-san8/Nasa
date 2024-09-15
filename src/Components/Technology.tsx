@@ -49,7 +49,7 @@ const Technology = () => {
 
   if (!data) return null;
   return (
-    <div className="flex flex-col items-center h-full">
+    <div className="flex flex-col items-center lg:h-screen">
       <h1 className="text-white tracking-wide pt-6 pb-20 md:self-start md:px-10 md:pt-10 lg:pl-32">
         <span className="font-bold opacity-25 pr-6 lg:text-nowrap">03</span>
         Lançamento espacial 101

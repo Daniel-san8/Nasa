@@ -42,8 +42,8 @@ const Crew = () => {
   if (!data) return null;
 
   return (
-    <div className="p-6 flex flex-col items-center justify-center h-full lg:flex-row lg:px-40">
-      <div className="flex flex-col items-center lg:h-full">
+    <div className="p-6 flex flex-col items-center justify-center lg:h-screen lg:flex-row lg:px-40">
+      <div className="h-full flex flex-col items-center lg:h-full">
         <h1 className="text-white tracking-wide md:self-start md:pt-10 lg:pb-14">
           <span className="font-bold opacity-25 pr-6 lg:text-nowrap ">02</span>
           Escolha sua tripulação
