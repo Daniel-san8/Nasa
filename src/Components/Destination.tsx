@@ -29,7 +29,7 @@ const Destination = () => {
         <ImagePlanet image={image} />
       </div>
 
-      <div className="flex flex-col items-center lg:h-screen lg:items-start">
+      <div className="flex flex-col items-center lg:items-start">
         <div className="md:pt-11 lg:pl-20 lg:pt-52 ">
           <ul className="flex text-blue-secondary gap-x-8">
             <li className="cursor-pointer" onClick={() => setPlanet("Moon")}>
