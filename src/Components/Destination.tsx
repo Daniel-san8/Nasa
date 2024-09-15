@@ -19,7 +19,7 @@ const Destination = () => {
   const planetObj = data.destinations?.find((dest) => dest.name === planet);
 
   return (
-    <div className="h-full w-full flex flex-col items-center font-barlow lg:flex-row lg:justify-between lg:pb-32">
+    <div className="h-screen w-full flex flex-col items-center font-barlow lg:flex-row lg:justify-between lg:pb-32">
       <div className="flex flex-col items-center lg:pl-32">
         <h1 className="text-white tracking-wide lg:self-start lg:pb-12">
           <span className="font-bold opacity-25 pr-6 lg:text-nowrap ">01</span>
